@@ -230,46 +230,45 @@ body {
     transform: translateX(0px);
     border-radius: 0 0 15px 15px;
 }`
-
-demo.innerText = string.substr(0, n)
-demo2.innerHTML = string.substr(0, n)
 let n = 0;
-let time = 100
+demo.innerText = string.substr(0, n);
+demo2.innerHTML = string.substr(0, n);
+let time = 100;
 const run = () => {
     n += 1;
     if (n > string.length) {
         window.clearInterval(id)
         return
     }
-    demo.innerText = string.substr(0, n)
-    demo2.innerHTML = string.substr(0, n)
-    console.log(n + ':' + string.substr(0, n))
-    demo.scrollTop = demo.scrollHeight
+    demo.innerText = string.substr(0, n);
+    demo2.innerHTML = string.substr(0, n);
+    console.log(n + ':' + string.substr(0, n));
+    demo.scrollTop = demo.scrollHeight;
 }
 
 const play = () => {
-    return setInterval(run, time)
+    return setInterval(run, time);
 }
 const pause = () => {
-    window.clearInterval(id)
+    window.clearInterval(id);
 }
 let id = play()
 
 const slow = () => {
     pause()
-    time = 300
+    time = 300;
     id = play()
 }
 
 const normal = () => {
     pause()
-    time = 100
+    time = 100;
     id = play()
 }
 
 const fast = () => {
     pause()
-    time = 0
+    time = 0;
     id = play()
 }
 
